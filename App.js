@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CurrentWeather from './components/CurrentWeather';
 import Forecats from './components/Forecats';
-import { APP_WEATHER} from '@env';
+import { KEY_APP_WEATHER} from '@env';
 
 const API_URL = (lat, lon) =>
-  `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APP_WEATHER}&lang=fr&units=metric`;
+  `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${KEY_APP_WEATHER}&lang=fr&units=metric`;
 
 export default function App() {
   const [loading, setLoading] = useState(true);
